@@ -31,9 +31,9 @@ Vagrant.configure("2") do |config|
   end
   # Máquina MariaDB #
 
-  config.vm.define "mariadb" do |mariadb|
-    mariadb.vm.hostname = "mariadb"
-    mariadb.vm.network "private_network", 
+  config.vm.define "db" do |db|
+    db.vm.hostname = "db"
+    db.vm.network "private_network", 
     type: "dhcp", 
     mac: "080027AABBCC", 
     virtualbox__intnet: "ProyectoFCT"
