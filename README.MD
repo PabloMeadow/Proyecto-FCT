@@ -1,0 +1,4 @@
+# Pendiente
+
+- DNS
+- FTP

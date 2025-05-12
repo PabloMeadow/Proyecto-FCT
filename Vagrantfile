@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
 
   end
   
-  # Máquina DNS #
+  # Servidor DNS (Master) #
 
   config.vm.define "dns" do |dns|
     dns.vm.hostname = "dns"
@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
   
   end
 
-  # Máquina FTP #
+  # Servidor FTP #
   
   config.vm.define "ftp" do |ftp|
     ftp.vm.hostname = "ftp"
@@ -29,7 +29,7 @@ Vagrant.configure("2") do |config|
     virtualbox__intnet: "ProyectoFCT"
 
   end
-  # Máquina MariaDB #
+  # Servidor DataBase (MariaDB) #
 
   config.vm.define "db" do |db|
     db.vm.hostname = "db"
@@ -40,7 +40,7 @@ Vagrant.configure("2") do |config|
 
   end
 
-  # Máquina Apache (PrestaShop) #
+  # Servidor Web (Apache2 + PrestaShop) #
 
   config.vm.define "web" do |web|
     web.vm.hostname = "web"
