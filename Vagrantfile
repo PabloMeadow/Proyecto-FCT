@@ -49,6 +49,8 @@ Vagrant.configure("2") do |config|
     mac: "080027CCDDEE", 
     virtualbox__intnet: "ProyectoFCT"
 
+    web.vm.provision "shell", path: "files/web/web_provision.sh"
+    
   end
 
 end

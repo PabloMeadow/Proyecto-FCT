@@ -11,8 +11,8 @@ apt install -y apache2 curl php php-mysql php-xml php-mbstring php-intl php-curl
 
 mkdir -p /etc/apache2/ssl
 
-cp /vagrant/files/web/ssl/prestashop.crt /etc/apache2/ssl/server.crt
-cp /vagrant/files/web/ssl/prestashop.key /etc/apache2/ssl/server.key
+cp /vagrant/files/web/prestashop.crt /etc/apache2/ssl/prestashop.crt
+cp /vagrant/files/web/prestashop.key /etc/apache2/ssl/prestashop.key
 
 # Descargar y descomprimir PrestaShop #
 
@@ -29,3 +29,12 @@ chmod -R 755 /var/www/html/
 
 cp /vagrant/files/web/prestashop.conf /etc/apache2/sites-available/prestashop.conf
 
+# Activar el VirtualHost, modulos y reiniciar Apache #
+
+a2enmod ssl
+a2enmod rewrite
+a2dissite 000-default.conf
+rm -rf /var/www/html/index.html
+a2ensite prestashop.conf
+
+systemctl restart apache2
