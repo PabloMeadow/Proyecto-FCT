@@ -5,7 +5,15 @@ apt update && apt upgrade -y
 
 # Instalar Apache, PHP y utilidades necesarias
 
-apt install -y apache2 curl php php-mysql php-xml php-mbstring php-intl php-curl php-zip php-gd php-cli php-soap libapache2-mod-php openssl unzip wget
+apt install -y apache2 ufw curl php php-mysql php-xml php-mbstring php-intl php-curl php-zip php-gd php-cli php-soap libapache2-mod-php openssl unzip wget
+
+# Configurar UFW para permitir tráfico SSH, HTTP y HTTPS #
+
+ufw default deny incoming
+ufw default allow outgoing
+ufw allow 22/tcp
+ufw allow 80/tcp
+ufw allow 443/tcp
 
 # Crear directorio SSL y copiar Certificados previamente generados #
 
