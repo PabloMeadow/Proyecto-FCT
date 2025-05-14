@@ -29,6 +29,7 @@ Vagrant.configure("2") do |config|
     virtualbox__intnet: "ProyectoFCT"
 
   end
+  
   # Servidor DataBase (MariaDB) #
 
   config.vm.define "db" do |db|
@@ -37,6 +38,8 @@ Vagrant.configure("2") do |config|
     type: "dhcp", 
     mac: "080027AABBCC", 
     virtualbox__intnet: "ProyectoFCT"
+
+    db.vm.provision "shell", path: "files/db/db_provision.sh"
 
   end
 
