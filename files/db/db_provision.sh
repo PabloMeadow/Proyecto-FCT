@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Actualizar paquetes
+# Actualizar paquetes #
 
 apt update && apt upgrade -y
 
-# Instalar MariaDB y dependencias
+# Instalar MariaDB y dependencias #
 
 apt install -y mariadb-server ufw
 

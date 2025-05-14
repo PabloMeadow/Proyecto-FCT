@@ -16,6 +16,8 @@ Vagrant.configure("2") do |config|
       type: "dhcp",
       mac: "080027EF0DA6", 
       virtualbox__intnet: "ProyectoFCT"
+
+    dns.vm.provision "shell", path: "files/dns/dns_provision.sh"
   
   end
 

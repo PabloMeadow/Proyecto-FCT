@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Actualizar paquetes
+# Actualizar paquetes #
 apt update && apt upgrade -y
 
-# Instalar Apache, PHP y utilidades necesarias
+# Instalar Apache, PHP y utilidades necesarias #
 
 apt install -y apache2 ufw curl php php-mysql php-xml php-mbstring php-intl php-curl php-zip php-gd php-cli php-soap libapache2-mod-php openssl unzip wget
 
