@@ -26,9 +26,11 @@ Vagrant.configure("2") do |config|
   config.vm.define "ftp" do |ftp|
     ftp.vm.hostname = "ftp"
     ftp.vm.network "private_network", 
-    type: "dhcp", 
-    mac: "0800275EE143", 
-    virtualbox__intnet: "ProyectoFCT"
+      type: "dhcp", 
+      mac: "0800275EE143", 
+      virtualbox__intnet: "ProyectoFCT"
+
+    ftp.vm.provision "shell", path: "files/ftp/ftp_provision.sh"
 
   end
   
@@ -37,9 +39,9 @@ Vagrant.configure("2") do |config|
   config.vm.define "db" do |db|
     db.vm.hostname = "db"
     db.vm.network "private_network", 
-    type: "dhcp", 
-    mac: "080027AABBCC", 
-    virtualbox__intnet: "ProyectoFCT"
+      type: "dhcp", 
+      mac: "080027AABBCC", 
+      virtualbox__intnet: "ProyectoFCT"
 
     db.vm.provision "shell", path: "files/db/db_provision.sh"
 
@@ -50,9 +52,9 @@ Vagrant.configure("2") do |config|
   config.vm.define "web" do |web|
     web.vm.hostname = "web"
     web.vm.network "private_network", 
-    type: "dhcp", 
-    mac: "080027CCDDEE", 
-    virtualbox__intnet: "ProyectoFCT"
+      type: "dhcp", 
+      mac: "080027CCDDEE", 
+      virtualbox__intnet: "ProyectoFCT"
 
     web.vm.provision "shell", path: "files/web/web_provision.sh"
     
