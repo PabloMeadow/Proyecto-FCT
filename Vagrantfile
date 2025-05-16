@@ -60,4 +60,28 @@ Vagrant.configure("2") do |config|
     
   end
 
+  # Servidor Database (PostgreSQL) #
+
+  config.vm.define "postgresql" do |postgresql|
+    postgresql.vm.hostname = "postgresql"
+    postgresql.vm.network "private_network", 
+      type: "dhcp", 
+      mac: "0800278DC04D",
+      virtualbox__intnet: "ProyectoFCT"
+
+
+    
+  end
+
+  # Servidor ERP (Odoo) #
+
+  config.vm.define "odoo" do |odoo|
+    odoo.vm.hostname = "odoo"
+    odoo.vm.network "private_network", 
+      type: "dhcp", 
+      mac: "080027B451AC",
+      virtualbox__intnet: "ProyectoFCT"
+
+
+  end
 end
