@@ -69,7 +69,7 @@ Vagrant.configure("2") do |config|
       mac: "0800278DC04D",
       virtualbox__intnet: "ProyectoFCT"
 
-
+    postgresql.vm.provision "shell", path: "files/postgresql/postgresql_provision.sh"
     
   end
 
