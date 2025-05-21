@@ -82,6 +82,7 @@ Vagrant.configure("2") do |config|
       mac: "080027B451AC",
       virtualbox__intnet: "ProyectoFCT"
 
+    odoo.vm.provision "shell", path: "files/odoo/odoo_provision.sh"
 
   end
 end

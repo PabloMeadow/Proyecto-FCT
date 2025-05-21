@@ -1,0 +1,14 @@
+[Unit]
+Description=Odoo
+Requires=network.target
+After=network.target
+
+[Service]
+Type=simple
+User=odoo
+Group=odoo
+ExecStart=/opt/odoo/venv/bin/python3 /opt/odoo/odoo/odoo-bin -c /etc/odoo.conf
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
