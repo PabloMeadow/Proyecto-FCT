@@ -11,7 +11,7 @@ apt install -y \
     libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev libpq-dev \
     libjpeg-dev libpng-dev liblcms2-dev libblas-dev libatlas-base-dev \
     libssl-dev libffi-dev libtiff5-dev libopenjp2-7-dev build-essential \
-    curl nodejs npm apache2
+    curl nodejs npm apache2 rsync
 
 # Crear usuario y entorno virtual #
 

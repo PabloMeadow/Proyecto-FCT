@@ -6,7 +6,7 @@ apt update && apt upgrade -y
 
 # Instalar Bind9 y dependencias #
 
-apt install -y bind9 bind9utils bind9-doc dnsutils ufw
+apt install -y bind9 bind9utils bind9-doc dnsutils ufw rsync
 
 # Configurar el firewall #
 

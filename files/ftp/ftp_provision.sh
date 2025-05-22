@@ -6,7 +6,7 @@ apt update && apt upgrade -y
 
 # Instalar vsftpd y dependencias #
 
-apt install -y vsftpd ufw
+apt install -y vsftpd ufw rsync
 
 # Configurar el firewall #
 

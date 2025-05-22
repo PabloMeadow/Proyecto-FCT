@@ -6,7 +6,7 @@ apt update && apt upgrade -y
 
 # Instalar MariaDB y dependencias #
 
-apt install -y mariadb-server ufw
+apt install -y mariadb-server ufw rsync
 
 ## Configurar UFW para permitir tráfico SSH y de base de datos #
 

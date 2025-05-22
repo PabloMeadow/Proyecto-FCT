@@ -98,4 +98,17 @@ Vagrant.configure("2") do |config|
     odoo.vm.provision "shell", path: "files/odoo/odoo_provision.sh"
 
   end
+
+    # Servidor Copias de Seguridad (rsync) #
+
+  config.vm.define "backup" do |backup|
+    backup.vm.hostname = "backup"
+    backup.vm.network "private_network", 
+      type: "dhcp", 
+      mac: "080027333752",
+      virtualbox__intnet: "ProyectoFCT"
+
+
+
+  end
 end
