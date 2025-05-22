@@ -5,7 +5,7 @@ apt update && apt upgrade -y
 
 # Instalar Apache, PHP y utilidades necesarias #
 
-apt install -y apache2 rsync ufw curl php php-mysql php-xml php-mbstring php-intl php-curl php-zip php-gd php-cli php-soap libapache2-mod-php openssl unzip wget
+apt install -y apache2 nfs-common ufw curl php php-mysql php-xml php-mbstring php-intl php-curl php-zip php-gd php-cli php-soap libapache2-mod-php openssl unzip wget
 
 # Configurar UFW para permitir tráfico SSH, HTTP y HTTPS #
 

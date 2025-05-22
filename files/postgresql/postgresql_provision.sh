@@ -6,7 +6,7 @@ apt update && apt upgrade -y
 
 # Instalar PostgreSQL y dependencias #
 
-apt install -y postgresql ufw rsync
+apt install -y postgresql ufw nfs-common
 
 # Configurar el firewall #
 
