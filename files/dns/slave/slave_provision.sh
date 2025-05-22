@@ -21,5 +21,9 @@ cp /vagrant/files/dns/slave/named.conf.options /etc/bind/named.conf.options
 cp /vagrant/files/dns/slave/named.conf.local /etc/bind/named.conf.local
 cp /vagrant/files/dns/slave/named.conf /etc/bind/named.conf
 
+mkdir -p /var/cache/bind
+chown -R bind:bind /var/cache/bind
+
+
 systemctl restart bind9
 

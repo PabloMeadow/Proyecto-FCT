@@ -10,12 +10,12 @@
 zone "proyectofct.local" {
     type slave;
     masters {192.168.1.2;};
-    file "/etc/bind/db.proyectofct.local";
+    file "/var/cache/bind/db.proyectofct.local";
 };
 
 zone "1.168.192.in-addr.arpa" {
 
 	type slave;
     masters {192.168.1.2;};
-	file "/etc/bind/db.192.168.1";
+	file "/var/cache/bind/db.192.168.1";
 };

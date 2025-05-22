@@ -17,7 +17,20 @@ Vagrant.configure("2") do |config|
       mac: "080027EF0DA6", 
       virtualbox__intnet: "ProyectoFCT"
 
-    dns.vm.provision "shell", path: "files/dns/dns_provision.sh"
+    dns.vm.provision "shell", path: "files/dns/master/dns_provision.sh"
+  
+  end
+
+    # Servidor DNS (Slave) #
+
+  config.vm.define "slave" do |slave|
+    slave.vm.hostname = "slave"
+    slave.vm.network "private_network", 
+      type: "dhcp",
+      mac: "080027C9678D", 
+      virtualbox__intnet: "ProyectoFCT"
+
+    slave.vm.provision "shell", path: "files/dns/slave/slave_provision.sh"
   
   end
 
