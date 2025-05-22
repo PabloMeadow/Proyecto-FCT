@@ -39,7 +39,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable odoo
 sudo systemctl restart odoo
 
-# Activar m,odulos de Apache #
+# Activar modulos de Apache #
 
 sudo a2enmod proxy proxy_http ssl headers rewrite
 
