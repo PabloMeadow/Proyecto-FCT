@@ -1,0 +1,1 @@
+0 * * * * /usr/bin/rsync -av --no-owner --no-group /var/cache/bind/ /mnt/backup/slave

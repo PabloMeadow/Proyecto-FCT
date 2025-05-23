@@ -24,6 +24,18 @@ cp /vagrant/files/dns/slave/named.conf /etc/bind/named.conf
 mkdir -p /var/cache/bind
 chown -R bind:bind /var/cache/bind
 
-
 systemctl restart bind9
 
+# Montar el directorio NFS #
+
+mkdir -p /mnt/backup
+
+grep -q "192.168.1.9:/srv/backups" /etc/fstab || cat <<EOF >> /etc/fstab
+192.168.1.9:/srv/backups  /mnt/backup  nfs  defaults  0  0
+EOF
+
+mount -a
+
+# Añadir la entrada crontab para la sincronización #
+
+crontab /vagrant/files/dns/slave/cronjobs.txt 
